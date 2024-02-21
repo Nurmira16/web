@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nurmira</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/core.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Montserrat:wght@400;500&family=Raleway:wght@400;500&=Indie+Flower&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="container">
+          <div class="inner_header">
+            <a href="index.html">
+              <div class="logotype">
+                <img id="logo" src="./assets/mainlogo.png" alt="logo" />
+              </div>
+            </a>
+            <ul class="menu">
+              <li class="menu_link">
+                <a href="#about">About</a>
+              </li>
+              <li class="menu_link">
+                <a href="#skillset">Skills</a>
+              </li>
+              <li class="menu_link">
+                <a href="#projects">Projects</a>
+              </li>
+            </ul>
+            <button onclick=contactForm() class="btn" id="btn-get">Click me!</button>
+          </div>
+        </div>
+      </div>
+      <div class="overlay" id="overlay"></div>
+      <div class="contactForm">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <a target="_blank" href="https://github.com/Nurmira16"><i class="fa fa-github"  style="font-size:34px; position: absolute; left: 3%; top: 3%; color: white;"></i></a>
+        <span class="material-symbols-outlined close" onclick=contactForm()>
+          close
+          </span>
+        <h4>Contact Me</h4>
+        <p>Fill out a short questionnaire and I will contact you and answer all your questions
+        </p>
+        <div class="footerInputs">
+          <input type="hidden" name="access_key" value="a4a4b866-0f1f-4659-b08a-770eb71bf949">
+          <input type="text" name="name" placeholder="Name" id="name" required>
+          <input type="text" name="number" placeholder="Phone number / WhatsApp/ Telegram" id="number" required>
+          <button type="submit" class="send" >Send</button>
+        </div>
+       
+      </form>
+    </div>
+      <div class="main_block">
+        <div class="container">
+          <div class="inner_main">
+            <div class="mainImage">
+              <img src="./assets/me-transformed.png" id="mainMe" alt="me" />
+            </div>
+            <div class="mainText">
+              <h2>Hello! I’m Nurmira</h2>
+              <h3>
+                 A DIGITAL CRAFTSWOMAN.
+              </h3>
+              <p>I'm passionate about creating experiences that are easy to use, accessible, and that meets user's needs.</p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+     
+      <section id="skills">
+        
+        <div class="skills">
+          <section id="about">
+        <div class="about">
+          <h5>About</h5>
+          <p>I am 21 years old frontend developer living in Poland. I love using my creativity to build things for the web. I decided to discover coding career at the age of 18 without having knowledge about it. Faced challenges along the way.Through persistence, self-discipline, and commitment, I achieved my goal of becoming frontend developer. I always find learning new things exciting.In addition to coding, I enjoy making DIYs and capturing moments on the phone. </p>
+        </div>
+      </section>
+
+        <div id="skillset">
+          <h5>Skillset</h5>
+          <ul>
+            <li>React</li>
+            <li>Javascript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>SASS</li>
+            <li>Bootstrap</li>
+            <li>MUI</li>
+            <li>API</li>
+            <li>Axios</li>
+           
+          </ul>
+          <ul>
+            <li>English C1</li>
+            <li>Russian C2</li>
+            <li>Turkish C2</li>
+            <li>Kyrgyz Native</li>
+          </ul>
+        </div>
+        <h5>Experience</h5>
+        <div class="experience-block">
+        <div class="experience">
+          <div class="date">
+            <p>07/2023 – 10/2023</p>
+            <p class="location">Malaga, Spain</p>
+          </div>
+          <div class="experience-details">
+            <h5>Web developer Intern in <a href="https://south.tours/">South Tours</a> </h5>
+            <p>Created design for web applications of company using Figma, implemented responsive real websites/projects using only HTML, and CSS ,(SASS)</p>
+          </div>
+        </div>
+        <div class="experience-skills">
+          <ul>
+            <li>React</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Figma</li>
+            <li>Wordpress</li>
+          </ul>
+        </div>
+      </div>
+      <div class="experience-block">
+        <div class="experience">
+          <div class="date">
+            <p>09/2022 – 11/2022</p>
+            <p class="location">Warsaw, Poland</p>
+          </div>
+          <div class="experience-details">
+            <h5>IT Service Specialist at <a href="https://www.nordea.com/en">Nordea Bank</a></h5>
+            <p>Provided support to more than 1200 end users through all appropriate channels, such as ITSM tools, Active Directory, O365</p>
+          </div>
+        </div>
+        <div class="experience-skills">
+          <ul>
+            <li>Active Directory</li>
+            <li>O365</li>
+            <li>Ticketing Systems</li>
+            <li>Troubleshooting</li>
+            <li>Communication</li>
+            <li>Time management</li>
+          </ul>
+        </div>
+      </div>
+      <div class="experience-block">
+        <div class="experience">
+          <div class="date">
+            <p>06/2022 – 09/2022</p>
+            <p class="location">Barcelona, Spain
+            </p>
+          </div>
+          <div class="experience-details">
+            <h5>Software Developer Intern at <a href="https://www.linkedin.com/company/proceedit-the-bpm-process'%E2%80%8B-factory-/">proceedit "the BPaaS company"</a>, transforming businesses and managing complexity for 20 years</h5>
+            <p>Launched first Stock Price Predictor UI using FlutterFlow</p>
+              <p>Developing and improving user interfaces (UI) for web applications</p>
+          </div>
+        </div>
+        <div class="experience-skills">
+          <ul>
+            <li>Flutter</li>
+            <li>Dart</li>
+            <li>Jira</li>
+            <li>Confluence</li>
+          
+          </ul>
+        </div>
+      </div>
+      
+     
+    </div>
+      
+      </div>
+  </section>
+  <section id="projects">
+    <div class="container">
+    <h5 style="text-align: center; margin-left: 110px;margin-bottom: 20px;">Projects</h5>
+      <div class="allProjects">
+        <div class="projects">
+          <a target="_blank" href="https://nurmira16.github.io/react-cryptocurrency-app/">
+          <p class="projectName">Cryptocurrency Tracker with React JS, Material UI <span class="material-symbols-outlined">
+            link
+            </span></p>
+          <p>Cryptocurrency Tracker built with React JS and Material UI, utilizing the Context API for state management, and integrating Coin Gecko API for real-time backend data.</p>
+        </a>
+        </div>
+      <div class="projects">
+        <a target="_blank" href="https://nurmira16.github.io/react-netflix-clone/">
+        <p class="projectName">Netflix Clone using React <span class="material-symbols-outlined">
+          link
+          </span></p>
+        <p>A captivating React app replicating the Netflix experience, seamlessly integrating with the Netflix API to deliver a user-friendly and dynamic streaming platform.</p>
+      </a>
+      </div>
+      <div class="projects">
+        <a target="_blank" href="https://nurmira16.github.io/react-pokemon/">
+        <p class="projectName">Pokemon React App <span class="material-symbols-outlined">
+          link
+          </span></p>
+        <p>An engaging Pokemon React app powered by the Pokemon API, featuring a plethora of hooks to enhance the user experience and deliver a dynamic and immersive journey into the world of Pokemon.</p>
+      </a>
+      </div>
+      
+      
+      <div class="projects">
+        <a target="_blank" href="https://nurmira16.github.io/react-amazon-clone/">
+        <p class="projectName">Amazon App using React <span class="material-symbols-outlined">
+          link
+          </span></p>
+        <p>An immersive Amazon React app powered by the Context API, seamlessly enhancing user experiences through efficient state management and dynamic content delivery</p>
+      </a>
+      </div>
+    </div>
+  </section>
+      <footer >
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <h4>Contact Me</h4>
+          <p>Fill out a short questionnaire and I will contact you and answer all your questions
+          </p>
+          <div class="footerInputs">
+            <input type="hidden" name="access_key" value="a4a4b866-0f1f-4659-b08a-770eb71bf949">
+            <input type="text" name="name" placeholder="Name" id="name" required>
+            <input type="text" name="number" placeholder="Phone number / WhatsApp/ Telegram" id="number" required>
+            <button type="submit" class="send" >Send</button>
+          </div>
+         
+        </form>
+      </footer>
+      
+
+    
+  </body>
+  <script src="js/modal.js"></script>
+  <script src="js/main.js"></script>
+</html>
