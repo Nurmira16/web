@@ -17,6 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 200px;
 }
 .sticking {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
@@ -44,8 +45,13 @@
 
 .menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 600px;
+}
+@media (max-width: 1618px) {
+  .menu{
+    /* display: none; */
+  }
 }
 
 .menu_link a {
@@ -66,14 +72,6 @@
 }
 
 
-#mainMe {
-  position: absolute;
-  right: 50%;
-  bottom: 10px;
-  height: 100%;
-  opacity: 0.5;
-  /* box-shadow: 30px 20px 20px rgba(17.13, 15.99, 15.99, 0.6); */
-}
 
 .mainText {
   display: flex;
@@ -97,6 +95,46 @@
     letter-spacing: -4px;
     animation: colorchange 5s infinite;
 }
+#mainMe {
+  position: absolute;
+  right: 50%;
+  bottom: 10px;
+  height: 100%;
+  opacity: 0.5;
+  /* box-shadow: 30px 20px 20px rgba(17.13, 15.99, 15.99, 0.6); */
+}
+@media (max-width:1128px) {
+  #mainMe{
+    left: 0;
+    top: 0;
+  }
+}
+@media (max-width:1000px) {
+  .mainText{
+    margin-top: 15%;
+    margin-left: 53%;
+  }
+  .mainText h2{
+    font-size: 1.8rem;
+  }
+  .mainText h3{
+    font-size: 2rem;
+  }
+  .mainText p{
+    font-size: 12px;
+  }
+  #mainMe{
+    height: 90%;
+  }
+  
+}
+@media (max-width:700px) {
+  #mainMe{
+    height: 63% !important;
+  }
+  
+}
+
 @keyframes colorchange {
   0%,100%{
     color: rgb(161, 27, 17);
@@ -114,19 +152,20 @@
 
 #skills {
   height: 100vh;
-  width: 1400px;
+  width: 70%;
   margin: 0 auto;
   position: relative;
   color: rgb(225, 222, 222);
  
 }
+
 .skills h5{
   margin-bottom: 15px;
 }
 .skills{
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  
 }
 #about{
   padding-top: 100px;
@@ -141,7 +180,6 @@
 ul{
   display: flex;
   gap: 20px;
-  margin-bottom: 15px;
 
 }
 #skillset{
@@ -163,21 +201,19 @@ ul{
 }
 .experience-skills li{
   border: 1px solid #a90d0d;
-  padding: 5px 10px;
+  padding: 2px 8px;
   color:#a90d0d;
   font-weight: 600;
 }
 .experience-skills{
   margin-top: 20px;
-  margin-left: 235px;
 }
 #projects{
-  margin-top: 25rem;
+  margin-top: 10rem;
 }
 .projects{
   
   height: 150px;
-  width: 800px;
   background-color: #686767 ;
   display: flex;
   flex-direction: column;
@@ -196,10 +232,16 @@ ul{
 }
 .allProjects{
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
   gap: 20px;
-  margin-bottom: 100px;
+  padding-bottom: 30px;
+  width: 70%;
+  margin: 0 auto;
 }
+
+/* .grid-container {
+  grid-template-columns: 1fr;
+} */
 
 @keyframes move {
   0%, 100% {
@@ -236,8 +278,9 @@ footer{
   background-color: #3a3a3a;
   text-align: center;
   position: fixed;
-  top: 20%;
-  left: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 101;
   border-radius: 20px;
   
