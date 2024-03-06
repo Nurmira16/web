@@ -1,3 +1,73 @@
+section#loadingPage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  animation: animateBg 10s linear infinite;
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.6) 0%, black 104%);
+}
+
+@keyframes animateBg{
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+section .loader{
+  position: relative;
+ width: 120px;
+ height: 120px;
+  
+  
+  color: #fff;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+section .loader span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(18deg * var(--i)));
+}
+
+section .loader span::before{
+  
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background-color: brown;
+  border-radius: 50%;
+  box-shadow: 0 0 10px brown, 
+  0 0 20px brown,
+  0 0 40px brown,
+  0 0 60px brown,
+  0 0 80px brown,
+  0 0 100px brown;
+  animation: animate 2s linear infinite;
+  animation-delay:calc(0.1s*var(--i) ) ;
+}
+
+@keyframes animate{
+  0%{
+    transform: scale(1);
+  }
+  80%,100%{
+    transform: scale(0);
+  }
+}
+#content {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
 /* HEADER */
 
 .header {
@@ -167,7 +237,25 @@
   
 }
 #about{
+  opacity: 0;
+transform: translateY(70px);
+  transition: opacity 0.5s, transform 1.5s;
   padding-top: 100px;
+}
+#about.visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+#projects{
+  opacity: 0;
+transform: translateY(70px);
+  transition: opacity 0.5s, transform 2.5s;
+  padding-top: 100px;
+}
+#projects.visible{
+  opacity: 1;
+  transform: translateY(0);
+
 }
 .about p{
   font-size: 18px;
@@ -183,7 +271,7 @@ ul{
 
 }
 #skillset{
-  margin-top: 50px;
+  margin-top: 80px;
 }
 #skillset li{
   background: #686767;
@@ -200,8 +288,7 @@ ul{
 
 }
 #experience{
-
-  margin-top: 20px;
+  margin-top: 65px;
 }
 .experience-skills li{
   border: 1px solid #a90d0d;
@@ -212,19 +299,40 @@ ul{
 .experience-skills{
   margin-top: 20px;
 }
-#projects{
-  margin-top: 10rem;
-}
+
 .projects{
   
-  height: 150px;
-  background-color: #686767 ;
+  height: 300px;
+
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   animation: move 4s infinite ease-in-out;
   padding: 50px;
+  gap: 20px;
+}
+.projects img{
+  height: 200px;
+  border-radius: 10px;
+}
+.projectInfo{
+  color: white;
+}
+.projects img:hover{
+  animation: scaleImage 2s;
+  cursor: pointer;
+
+}
+@keyframes scaleImage{
+ 0%,100%{
+  transform: scale(1);
+ }
+ 50%{
+  transform: scale(1.1);
+ }
+}
+.projects p{
+  font-size: 15px;
 }
 .projectName{
   font-size: 20px;
@@ -235,12 +343,9 @@ ul{
   gap: 10px;
 }
 .allProjects{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
-  gap: 20px;
   padding-bottom: 30px;
   width: 70%;
-  margin: 0 auto;
+  margin: 100px auto;
 }
 
 /* .grid-container {
@@ -259,9 +364,8 @@ ul{
 .projects a:hover{
   color: white;
 }
-.projects:hover span{
-  color: #a90d0d;
-  cursor: pointer;
+.allProjects span, .allProjects i{
+  font-size: 30px;
 }
 footer{
   height: 400px;
@@ -347,4 +451,10 @@ button{
 }
 button:hover{
   background-color: #7b7b7b;
+}
+.links{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
 }
