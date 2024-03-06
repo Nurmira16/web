@@ -128,7 +128,10 @@ section .loader span::before{
 .menu_link a:hover {
   text-decoration: underline;
 }
-
+.header-buttons{
+  display: flex;
+  
+}
 /* MAIN BLOCK */
 
 .main_block {
